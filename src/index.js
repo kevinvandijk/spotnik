@@ -1,4 +1,3 @@
-// import path from 'path';
 import 'dotenv/config';
 import telegram from './telegram';
 import spotify, { getSpotifyTrackFromUrl } from './spotify';
@@ -18,12 +17,11 @@ async function addTracksToPlaylist(id, trackIds, removeDuplicates = false) {
 }
 
 telegram.connect(connection => {
+  console.log('Connected to Telegram API');
+
   connection.on('message', async message => {
     if (message.event !== 'message') return;
     if (!message.text) return;
-
-    console.log('received message', message.text);
-
 
     const urlRegex = /(https?:\/\/[^\s]+)/gi;
     const urls = message.text.match(urlRegex) || [];
