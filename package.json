@@ -1,0 +1,34 @@
+{
+  "name": "spotnik",
+  "version": "1.0.0",
+  "description": "Telegram client to copy Spotify links shared in private chat to a playlist",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinvandijk/spotnik.git"
+  },
+  "author": "Kevin van Dijk <kevin@sqre.one>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinvandijk/spotnik/issues"
+  },
+  "homepage": "https://github.com/kevinvandijk/spotnik#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "promise-retryify": "^0.5.0",
+    "spotify-uri": "^1.0.0",
+    "spotify-web-api-node": "^4.0.0",
+    "tg-cli-node": "0.0.8"
+  }
+}
