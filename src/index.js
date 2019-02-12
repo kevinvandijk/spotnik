@@ -13,7 +13,7 @@ async function addTracksToPlaylist(id, trackIds, removeDuplicates = false) {
     await spotify.removeTracksFromPlaylist(id, spotifyTrackIds.map(trackId => ({ uri: trackId })));
   }
 
-  await spotify.addTracksToPlaylist(id, spotifyTrackIds, { position: 1 });
+  await spotify.addTracksToPlaylist(id, spotifyTrackIds, { position: 0 });
 }
 
 telegram.connect(connection => {
